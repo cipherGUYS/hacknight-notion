@@ -4,7 +4,7 @@
 
 body {
     background-color: rgb(221, 221, 249);
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 h1,

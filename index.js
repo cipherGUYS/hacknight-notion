@@ -61,10 +61,10 @@ app.post('/home', async (req, res) => {
                 },
             }
         })
-        console.log(response)
+        res.status(200).render('success.hbs');
     }
     catch (error) {
-        console.log(error);
+        console.log(error)
     }
 });
 
@@ -72,12 +72,27 @@ app.get('/signin', (req, res) => {
     res.status(200).render('signin.hbs');
 });
 
-app.post('/signin', (req, res) => {
+app.post('/signin', async (req, res) => {
     const name = req.body.name;
     const password = req.body.password;
 
     if (name == "admin" && password == "admin") {
-        res.status(200).render('admin.hbs');
+    
+        var data = [];
+        var temp_data;
+        const response = await notion.databases.query({
+            database_id: dbID,
+        });
+        let i = 0;
+        while (({ response }.response.results[i].properties.Name.title).length) {
+            var JSONname = { response }.response.results[i].properties.Name.title[0].plain_text;
+            var JSONyear = { response }.response.results[i].properties.Year.rich_text[0].text.content;
+            var JSONrequest = { response }.response.results[i].properties.Request.rich_text[0].text.content;
+            i++;
+            temp_data = { "Name": JSONname, "Year": JSONyear, "Request": JSONrequest };
+            data.push(temp_data);
+        }
+        res.status(200).render('admin.hbs', {data});
     }
     else {
         res.status(200).render('signin.hbs');

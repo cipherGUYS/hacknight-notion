@@ -1,14 +1,21 @@
-<div class="container">
+<div align="right">
+    <div class="mt-5">
+        <button id="signin" class="btn btn-send me-3" onclick="signout()">Sign Out</button>
+    </div>
+</div>
+<div class="mt-5">
     <div class="row">
         <h1 class="text-center mb-5" style="color: black;">Admin Panel</h1>
         <div class="main-box col-lg-5 col-md-8 mx-auto p-4 rounded">
+            {{#each data}}
             <div class="card mt-4">
                 <div class="card-body">
-                    <h6>Name: </h6>
-                    <h6>Year: </h6>
-                    <h6>Request: </h6>
+                    <h6>Name: {{this.Name}}</h6>
+                    <h6>Year: {{this.Year}}</h6>
+                    <h6>Request: {{this.Request}}</h6>
                 </div>
             </div>
+            {{/each}}
         </div>
     </div>
     <footer>
