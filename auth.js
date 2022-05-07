@@ -14,7 +14,9 @@ function auth() {
     }
     else {
         document.getElementById("error").innerHTML = "Username and Password doesn't match";
-        setTimeout()
+        setTimeout(()=>{
+            document.getElementById("error").innerHTML = "";
+        },2500)
     }
 }
 submit.addEventListener("click", auth);
