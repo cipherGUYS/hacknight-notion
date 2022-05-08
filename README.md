@@ -33,3 +33,7 @@ Drive link is <a href="https://drive.google.com/file/d/19nlkeCBN59RKbLs7tS8yj7pH
 * /admin
 
 ## Snapshots 🖼️
+<img src="snapshots/1.png" width="700px">
+<img src="snapshots/2.png" width="700px">
+<img src="snapshots/3.png" width="700px">
+<img src="snapshots/4.png" width="700px">
