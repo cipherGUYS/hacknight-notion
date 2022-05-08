@@ -1,10 +1,12 @@
-# hacknight-notion
+# hacknight-notion 👨‍💻
+
+A simple web app for made JY where students can enter there prayer requests and it will be stored in Notion database.<br>
+
+###### Tech. Used: NodeJS, Express, Handlebars, Notion Client <br><br>
 
 ## Link to product walkthrough 🔗
 Drive link is <a href="https://drive.google.com/file/d/19nlkeCBN59RKbLs7tS8yj7pHmt-RoYRs/view?usp=sharing">here</a>
-
-
-<br>
+<br><br>
 
 ## How to run 🏃
 1. Clone the repo
@@ -24,8 +26,7 @@ Drive link is <a href="https://drive.google.com/file/d/19nlkeCBN59RKbLs7tS8yj7pH
          http://localhost:5000/home
          
 5. That's All :relieved: 
-
-<br>
+<br><br>
 
 ## Routes 🛣️
 * /home
